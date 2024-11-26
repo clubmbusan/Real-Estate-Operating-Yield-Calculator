@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Operating Yield Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Real Estate Operating Yield Calculator</h1>
+    <div class="calculator">
+        <div class="form-group">
+            <label for="purchasePrice">Purchase Price ($):</label>
+            <input type="number" id="purchasePrice" placeholder="e.g., 300000000">
+        </div>
+        <div class="form-group">
+            <label for="annualRent">Annual Rent Income ($):</label>
+            <input type="number" id="annualRent" placeholder="e.g., 24000000">
+        </div>
+        <div class="form-group">
+            <label for="managementFee">Management Fee ($):</label>
+            <input type="number" id="managementFee" placeholder="e.g., 1200000">
+        </div>
+        <div class="form-group">
+            <label for="propertyTax">Property Tax ($):</label>
+            <input type="number" id="propertyTax" placeholder="e.g., 500000">
+        </div>
+        <div class="form-group">
+            <label for="maintenanceFee">Maintenance Fee ($):</label>
+            <input type="number" id="maintenanceFee" placeholder="e.g., 800000">
+        </div>
+        <div class="form-group">
+            <label for="insuranceFee">Insurance Fee ($):</label>
+            <input type="number" id="insuranceFee" placeholder="e.g., 500000">
+        </div>
+        <div class="form-group">
+            <label for="vacancyLoss">Vacancy Loss ($):</label>
+            <input type="number" id="vacancyLoss" placeholder="e.g., 400000">
+        </div>
+        <button onclick="calculateOperatingYield()">Calculate Operating Yield</button>
+        <div class="results" id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
