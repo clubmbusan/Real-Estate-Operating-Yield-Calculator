@@ -8,24 +8,24 @@ function calculateOperatingYield() {
     const vacancyLoss = parseFloat(document.getElementById('vacancyLoss').value);
 
     if (!purchasePrice || !annualRent || !managementFee || !propertyTax || !maintenanceFee || !insuranceFee || !vacancyLoss) {
-        alert("Please fill out all fields!");
+        alert("모든 필드를 입력해주세요!");
         return;
     }
 
-    // Calculate total operating costs
+    // 총 운영 비용 계산
     const totalOperatingCosts = managementFee + propertyTax + maintenanceFee + insuranceFee + vacancyLoss;
 
-    // Calculate net annual income
+    // 연간 순수익 계산
     const netAnnualIncome = annualRent - totalOperatingCosts;
 
-    // Calculate operating yield
+    // 운영 수익률 계산
     const operatingYield = (netAnnualIncome / purchasePrice) * 100;
 
-    // Display results
+    // 결과 표시
     document.getElementById('results').innerHTML = `
-        <p><strong>Operating Yield Calculation Result:</strong></p>
-        <p>Total Operating Costs: $${totalOperatingCosts.toLocaleString()}</p>
-        <p>Net Annual Income: $${netAnnualIncome.toLocaleString()}</p>
-        <p>Operating Yield: ${operatingYield.toFixed(2)}%</p>
+        <p><strong>운영수익률 계산 결과:</strong></p>
+        <p>총 운영 비용: ₩${totalOperatingCosts.toLocaleString()}</p>
+        <p>연간 순수익: ₩${netAnnualIncome.toLocaleString()}</p>
+        <p>운영 수익률: ${operatingYield.toFixed(2)}%</p>
     `;
 }
